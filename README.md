@@ -1,2 +1,2 @@
 # BildeOpplasting
-Ide rundt en bildeopplasting på webside
+Ide rundt bildeopplasting på webside jobbet med i Visual Studio
