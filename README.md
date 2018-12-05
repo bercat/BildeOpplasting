@@ -1,2 +1,2 @@
 # BildeOpplasting
-Ide rundt bilde opplasting
+Ide rundt en bildeopplasting på webside
