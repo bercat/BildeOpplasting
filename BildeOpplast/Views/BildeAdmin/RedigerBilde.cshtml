@@ -1,0 +1,16 @@
+﻿@model BildeOpplast.Models.Bilde
+@{
+    ViewBag.Title = "RedigerBilde";
+}
+
+<h2>RedigerBilde</h2>
+
+@using (Html.BeginForm()) 
+{ 
+    <label>Tittel</label>
+    @Html.TextBoxFor(bilde => bilde.Tittel, new { @Value = @Model.Tittel })
+    
+    <input type="submit" value="Endre tittel" />
+}
+
+

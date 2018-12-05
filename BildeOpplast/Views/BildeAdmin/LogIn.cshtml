@@ -1,0 +1,13 @@
+﻿@model BildeOpplast.Models.Bruker
+@{
+    ViewBag.Title = "LogIn";
+}
+
+<h2>Logg inn</h2>
+
+@using (Html.BeginForm())
+{
+    <label>Skriv inn et brukernavn</label>
+    @Html.TextBoxFor( bruker => bruker.Brukernavn)
+    <input type="submit" value="Logg inn" />
+}

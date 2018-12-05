@@ -1,0 +1,39 @@
+﻿@model BildeOpplast.Models.Bilde
+
+@{
+    ViewBag.Title = "LastOppBilde";
+}
+
+<h2>Last opp bilde</h2>
+
+@using (Html.BeginForm("LastOppBilde", "BildeAdmin", FormMethod.Post, new { enctype="multipart/form-data" }))
+{
+    
+    <table>
+        <tr>
+            <td>@Html.Label("tittelTxt", "Tittel")</td>
+            <td>@Html.TextBoxFor(bilde => bilde.Tittel, new { id = "tittelTxt" })</td>
+        </tr>
+        <tr>
+            <td>@Html.Label("bildeopplast", "Velg bilde")</td>
+            <td><input id="bildeopplast" type="file" name="bildefil" /></td>
+        </tr>
+    </table>
+    <input type="submit" value="Last opp bilde" />
+}
+
+@if(ViewBag.LastetOpp!=null){
+
+    if (ViewBag.LastetOpp == true)
+    {
+        <p>Lagringen ble gjennomført :)</p>
+    }
+    else
+    {
+        <p>En feil skjedde ved opplasting: @ViewBag.Feilmelding</p>
+    }
+        
+}
+
+
+

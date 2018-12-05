@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+
+    <header>
+        <h1>Bildeopplasting</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li>@Html.ActionLink("Last opp bilde", "LastOppBilde", "BildeAdmin")</li>
+            <li>@Html.ActionLink("Vis opplastinger", "VisOpplastinger", "BildeAdmin")</li>
+        </ul>
+    </nav>
+
+    <div>
+        @RenderBody()
+    </div>
+</body>
+</html>

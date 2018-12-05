@@ -1,0 +1,30 @@
+﻿@model IEnumerable<BildeOpplast.Models.Bilde>
+@{
+    ViewBag.Title = "VisOpplastinger";
+}
+
+@{
+    string loggOutTekst = "Logg ut " + ViewBag.Brukernavn;
+}
+
+@Html.ActionLink(loggOutTekst, "LogOut")
+
+<h2>Vis opplastinger</h2>
+
+<table>
+
+    @foreach(var bilde in Model){
+        <tr>
+            <td>Tittel</td>
+            <td>@bilde.Tittel</td>
+            <td>@Html.ActionLink("Rediger", "RedigerBilde", new { @id = @bilde.Id })</td>
+        </tr>
+        <tr>
+            <td>Bilde</td>
+            <td><img src="~/Content/Bilder/@bilde.BildeSrc" /></td>
+        </tr>
+    }
+
+</table>
+
+
